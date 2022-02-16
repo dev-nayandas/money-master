@@ -30,7 +30,17 @@ document.getElementById('calculation').addEventListener('click', function () {
     const balance = totalBalance.innerText;
     totalBalance.innerText = balanceAmount;
 
-    //console.log(balanceAmount);
+
+
+
+
+// error handling  one
+if(totalExpenses > monthlyEarn){
+    const notify = document.getElementById('notification');
+    notify.style.display = "block";
+    
+}
+
 });
 
 // saving calculation 
@@ -67,9 +77,15 @@ document.getElementById('saving-btn').addEventListener('click', function(){
 
     const remainingBalance = monthlyEarn - (totalExpenses + savingFinalAmount);
     remainingTotal.innerText = remainingBalance;
-    
 
-    console.log(remainingBalance)
+    const balanceAmount = monthlyEarn - totalExpenses;
+
+    //error handling two
+
+if(savingFinalAmount > balanceAmount ){
+    const notify = document.getElementById('notification');
+    notify.style.display = "block";
+}
 
 })
 

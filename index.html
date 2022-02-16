@@ -8,11 +8,12 @@
     <title>Money Master</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h2 class="text-center text-info mt-5 p-4 fs-1">Monthly Money Expenses</h2>
+        <h2 class="text-center text-info mt-5 p-4 fs-1 ">Monthly Money Expenses</h2>
     </header>
     <main>
         <div class="containe d-flex p-5">
@@ -26,16 +27,19 @@
                 Food : <input id="food-cost" class="mt-3" type="text"><br>
                 Rent : <input id="rent-cost" class="mt-3" type="text"><br>
                 clothes : <input id="clothes-cost" class="mt-3" type="text"><br>
-                <button id="calculation" class="mt-3 bg-primary text-white px-4 py-2 mb-3  rounded mx-auto ms-5">Caculate</button>
-                <h4  class="text-center">Total Expenses : <span id="total-expenses">00</span></h3>
-                    <h4  class="text-center">Balance : <span id="balance">00</span></h3>
-                        Save : <input id="saving-field" type="text"> % <button  id="saving-btn"
-                        class="mt-3 bg-primary text-white px-4 py-2 mb-3  rounded">Save</button><br>
-                        <h4  class="text-center">Saving Amount : <span id="saving-value">00</span></h3>
-                        <h4  class="text-center">Remaining Balance : <span id="remaining-value">00</span></h3>
-                </form>
+                <button id="calculation"
+                    class="mt-3 bg-primary text-white px-4 py-2 mb-3  rounded mx-auto ms-5">Caculate</button>
+                <h4 class="text-center">Total Expenses : <span id="total-expenses">00</span></h3>
+                    <h4 class="text-center">Balance : <span id="balance">00</span></h3>
+                        Save : <input id="saving-field" type="text"> % <button id="saving-btn"
+                            class="mt-3 bg-primary text-white px-4 py-2 mb-3  rounded">Save</button><br>
+                        <h4 class="text-center">Saving Amount : <span id="saving-value">00</span></h3>
+                            <h4 class="text-center">Remaining Balance : <span id="remaining-value">00</span></h3>
+                                </form>
             </div>
         </div>
+        <p id="notification" class=" text-center text-danger">Total Expanses and Total Saving Amount Can't be more than
+            Income</p>
     </main>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
