@@ -35,11 +35,12 @@ document.getElementById('calculation').addEventListener('click', function () {
 
 
 // error handling  one
-if(totalExpenses > monthlyEarn){
+if(totalExpenses > monthlyEarn || monthlyIncome < 0|| foodCost < 0 || rentCost < 0 || clothesCost < 0){
     const notify = document.getElementById('notification');
     notify.style.display = "block";
     
-}
+};
+
 
 });
 
@@ -82,7 +83,7 @@ document.getElementById('saving-btn').addEventListener('click', function(){
 
     //error handling two
 
-if(savingFinalAmount > balanceAmount ){
+if(savingFinalAmount > balanceAmount || savingField < 0 ){
     const notify = document.getElementById('notification');
     notify.style.display = "block";
 }
