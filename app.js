@@ -5,16 +5,15 @@ document.getElementById('calculation').addEventListener('click', function () {
     //cost amounts
     let foodCost = document.getElementById('food-cost').value;
     const foodAmount = parseFloat(foodCost);
-
     const rentCost = document.getElementById('rent-cost').value;
     const rentAmount = parseFloat(rentCost);
-
     const clothesCost = document.getElementById('clothes-cost').value;
     const clothesAmount = parseFloat(clothesCost);
-
-
-    // total expenses calcilation
+    // total expenses calculation
     const totalExpenses = foodAmount + rentAmount + clothesAmount;
+
+
+
     const totalSpent = document.getElementById('total-expenses');
     const totalSpentAmount = totalSpent.innerText;
     totalSpent.innerText = totalExpenses;
@@ -49,6 +48,28 @@ document.getElementById('saving-btn').addEventListener('click', function(){
 
     const savingFinalAmount = savingAmount * monthlyEarn /100;
     savingTotal.innerText = savingFinalAmount;
+
+    //remaining balance calculation
+    const remainingTotal = document.getElementById('remaining-value');
+    const remaining = remainingTotal.innerText;
+
+
+
+    // total expenses
+    let foodCost = document.getElementById('food-cost').value;
+    const foodAmount = parseFloat(foodCost);
+    const rentCost = document.getElementById('rent-cost').value;
+    const rentAmount = parseFloat(rentCost);
+    const clothesCost = document.getElementById('clothes-cost').value;
+    const clothesAmount = parseFloat(clothesCost);
+    // total expenses calculation
+    const totalExpenses = foodAmount + rentAmount + clothesAmount;
+
+    const remainingBalance = monthlyEarn - (totalExpenses + savingFinalAmount);
+    remainingTotal.innerText = remainingBalance;
+    
+
+    console.log(remainingBalance)
 
 })
 
