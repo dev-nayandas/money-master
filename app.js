@@ -33,5 +33,21 @@ document.getElementById('calculation').addEventListener('click', function () {
 
     //console.log(balanceAmount);
 });
+document.getElementById('saving-btn').addEventListener('click', function(){
+    
+
+    const savingField = document.getElementById('saving-field').value;
+    const savingAmount =parseFloat(savingField);
+
+    const savingTotal = document.getElementById('saving-value');
+    const saving = savingTotal.innerText;
+
+    const monthlyIncome = document.getElementById('monthly-income').value;
+    const monthlyEarn = parseFloat(monthlyIncome);
+
+
+    const savingFinalAmount = (20*100) / monthlyEarn
+    console.log(savingAmount)
+})
 
 
